@@ -12,7 +12,7 @@ class HomeTab extends StatefulWidget {
 }
 
 DateTime datenow = DateTime.now();
-const urlImg = "http://20.10.0.19/empImg/luffy.jpg";
+const urlImg = "http://20.10.0.19/empImg/naruto.jpg";
 
 class _homeState extends State<HomeTab> {
   String rfid;

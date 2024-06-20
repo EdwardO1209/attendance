@@ -13,14 +13,14 @@ class navigation extends StatefulWidget {
 }
 
 DateTime datenow = DateTime.now();
-const urlImg = "http://10.0.17.126/empImg/luffy.jpg";
+const urlImg = "http://10.0.17.126/empImg/naruto.jpg";
 
 class _navigationState extends State<navigation> {
   int selectedIndex = 0;
   final List<Widget> tabs = [
-    HomeTab(rfid: ""),
+    HomeTab(rfid: ''),
     menu(
-      rfid: null,
+      rfid: '',
     ),
     const PersonsTab(),
   ];

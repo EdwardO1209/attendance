@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
         fontSize: 16,
       );
     } else {
-      var uri = 'https://20.10.0.19/conn/login.php';
+      var uri = 'https://10.0.17.126/conn/login.php';
       var response = await http.post(Uri.parse(uri),
           body: ({
             'username': username.text,

@@ -15,7 +15,7 @@ class menu extends StatefulWidget {
 }
 
 DateTime datenow = DateTime.now();
-const urlImg = "http://20.10.0.19/empImg/luffy.jpg";
+const urlImg = "http://20.10.0.19/empImg/naruto.jpg";
 
 class _menuState extends State<menu> {
   String rfid;
@@ -28,11 +28,12 @@ class _menuState extends State<menu> {
   String lastname = "";
 
   Future<List<Employee>> getAttendance() async {
-    var uri = 'http://20.10.0.19/conn/view_data.php/';
+    var uri = 'https://10.0.17.126/conn/view_data.php';
     final response = await http.post(Uri.parse(uri),
         body: ({'rfid': rfid, 'logdate': datenow.toString()}));
+
     var list = json.decode(response.body);
-    print(datenow);
+
     List<Employee> employees =
         await list.map<Employee>((json) => Employee.fromJson(json)).toList();
     employeeDataSource = EmployeeDataSource(employees);
